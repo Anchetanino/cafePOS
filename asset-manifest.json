@@ -1,28 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.951d6303.css",
-    "main.js": "/static/js/main.51243270.js",
-    "static/js/787.6e1e15e3.chunk.js": "/static/js/787.6e1e15e3.chunk.js",
-    "static/media/Background.svg": "/static/media/Background.08c9ab2001e097527b42c86373e69b93.svg",
-    "static/media/Macchiato.jpg": "/static/media/Macchiato.be1dbd936cc2586ef5ce.jpg",
-    "static/media/Logo.svg": "/static/media/Logo.ba67247baa770d0fc5fd0b1d4ae444b7.svg",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "static/media/History.svg": "/static/media/History.51370be806b06dde8a84b0e70bf9be40.svg",
-    "static/media/Product_List.svg": "/static/media/Product_List.b0f0d5e8c2b5637f7f92dc7b6ee7c4cd.svg",
-    "static/media/Stocks.svg": "/static/media/Stocks.e5b7679d02bfdd549e917ed48c58d569.svg",
-    "static/media/Exit_Icon.svg": "/static/media/Exit_Icon.5612212ff16fd474a2791961aac1448d.svg",
-    "static/media/Dashboard.svg": "/static/media/Dashboard.5ffc808fcc7b2817bb995bd4f696fd31.svg",
-    "static/media/Update.svg": "/static/media/Update.decf14385ab7e16cd762dbeff2db7942.svg",
-    "index.html": "/index.html",
-    "static/media/Delete.svg": "/static/media/Delete.9df9e3a5e461d06e3d963d1fd5336a23.svg",
-    "static/media/Add.svg": "/static/media/Add.24ed2c96db9a87f1b993e83ce84df4e5.svg",
-    "static/media/Menu_Icon.svg": "/static/media/Menu_Icon.22a05970d93e0f98250a9ec63d516662.svg",
-    "main.951d6303.css.map": "/static/css/main.951d6303.css.map",
-    "main.51243270.js.map": "/static/js/main.51243270.js.map",
-    "787.6e1e15e3.chunk.js.map": "/static/js/787.6e1e15e3.chunk.js.map"
+    "main.css": "/Anchetanino/cafePOS.git/static/css/main.b818699c.css",
+    "main.js": "/Anchetanino/cafePOS.git/static/js/main.de65c13c.js",
+    "static/js/787.6e1e15e3.chunk.js": "/Anchetanino/cafePOS.git/static/js/787.6e1e15e3.chunk.js",
+    "static/media/Profile.jpg": "/Anchetanino/cafePOS.git/static/media/Profile.fd9ba3ab026404512d0b.jpg",
+    "static/media/Background.svg": "/Anchetanino/cafePOS.git/static/media/Background.08c9ab2001e097527b42c86373e69b93.svg",
+    "static/media/Macchiato.jpg": "/Anchetanino/cafePOS.git/static/media/Macchiato.be1dbd936cc2586ef5ce.jpg",
+    "static/media/Logo.svg": "/Anchetanino/cafePOS.git/static/media/Logo.ba67247baa770d0fc5fd0b1d4ae444b7.svg",
+    "static/media/logo.svg": "/Anchetanino/cafePOS.git/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/History.svg": "/Anchetanino/cafePOS.git/static/media/History.51370be806b06dde8a84b0e70bf9be40.svg",
+    "static/media/Product_List.svg": "/Anchetanino/cafePOS.git/static/media/Product_List.b0f0d5e8c2b5637f7f92dc7b6ee7c4cd.svg",
+    "static/media/Stocks.svg": "/Anchetanino/cafePOS.git/static/media/Stocks.e5b7679d02bfdd549e917ed48c58d569.svg",
+    "static/media/Exit_Icon.svg": "/Anchetanino/cafePOS.git/static/media/Exit_Icon.5612212ff16fd474a2791961aac1448d.svg",
+    "static/media/Dashboard.svg": "/Anchetanino/cafePOS.git/static/media/Dashboard.5ffc808fcc7b2817bb995bd4f696fd31.svg",
+    "index.html": "/Anchetanino/cafePOS.git/index.html",
+    "static/media/Update.svg": "/Anchetanino/cafePOS.git/static/media/Update.decf14385ab7e16cd762dbeff2db7942.svg",
+    "static/media/Delete.svg": "/Anchetanino/cafePOS.git/static/media/Delete.9df9e3a5e461d06e3d963d1fd5336a23.svg",
+    "static/media/Add.svg": "/Anchetanino/cafePOS.git/static/media/Add.24ed2c96db9a87f1b993e83ce84df4e5.svg",
+    "static/media/Menu_Icon.svg": "/Anchetanino/cafePOS.git/static/media/Menu_Icon.22a05970d93e0f98250a9ec63d516662.svg",
+    "main.b818699c.css.map": "/Anchetanino/cafePOS.git/static/css/main.b818699c.css.map",
+    "main.de65c13c.js.map": "/Anchetanino/cafePOS.git/static/js/main.de65c13c.js.map",
+    "787.6e1e15e3.chunk.js.map": "/Anchetanino/cafePOS.git/static/js/787.6e1e15e3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.951d6303.css",
-    "static/js/main.51243270.js"
+    "static/css/main.b818699c.css",
+    "static/js/main.de65c13c.js"
   ]
 }
