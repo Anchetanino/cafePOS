@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+.logIn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* background-color: #FDF5DF; */
+    background-image: url('../images/Background.svg');
+}
+
+.logInContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fc4c55;
+    padding: 15px;
+    border-radius: 2%;
+    width: 250px;
+    height: 325px;
+    box-shadow: 5px 5px 2px rgb(96, 95, 95);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.logInHeader {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.signInButton {
+    color: black;
+    text-decoration-line: none;
+}
+
+.signButton:hover {
+    background-color: #aeaeae;
+    color: #fff;
+}
+
+.registerAccount {
+    /* font-family: 'Work Sans', sans-serif; */
+    font-size: 12px;
+}
+
+.registerButton {
+    font-size: 12px;
+    border: none;
+    background: none;
+}
+
+.registerButton:hover {
+    color: rgb(20, 0, 241);
+}
+
+input {
+    padding: 5px;
+    border: none;
+    border-bottom: solid 1.5px black;
+    outline: none;
+}
+
+input::placeholder {
+    color: rgb(86, 84, 84);
+}
+
+input[type=submit]:hover {
+    background-color: #fba2ba;
+}
+
+.home {
+    background-image: url('../images/Background.svg');
+    width: 100%;
+    height: 100vh;
+}
+
+.navBar {
+    height: 5vh;
+    background-color: #fc4c55;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.iconOne,
+.iconTwo {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuIcon:hover,
+.logoutIcon:hover {
+    transform: scale(1.10, 1.10)
+}
+
+.profileIcon {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    left: 5px;
+    background-color: #fff;
+    border-radius: 8px;
+    /* padding: 5px; */
+    width: 200px;
+}
+
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 5px;
+    height: 20px;
+    width: 20px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+.dropdown-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: 500ms ease;
+    z-index: 1;
+}
+
+.dropdown-menu.inactive {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: 500ms ease;
+}
+
+.dropdown-menu ul li {
+    padding: 5px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    color: black;
+}
+
+.dropdown-menu ul li:hover a {
+    color: rgb(20, 0, 241);
+    cursor: pointer;
+}
+
+.dropdown-menu ul li:hover img {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.dropdownItem {
+    display: flex;
+    margin: 10px auto;
+}
+
+.dropdownItem img {
+    max-width: 20px;
+    margin-right: 10px;
+    opacity: 0.5;
+    transition: 500ms;
+}
+
+.dropdownItem a {
+    max-width: 100px;
+    margin-left: 10px;
+    transition: 500ms;
+}
+
+.productDashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-gap: 2px;
+    overflow-y: scroll;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #e99bbd;
+    width: 57%;
+    height: 60vh;
+    border-radius: 2%;
+    box-shadow: 5px 5px 2px rgb(155, 155, 155);
+}
+
+.productList {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5px;
+}
+
+.productCard {
+    position: relative;
+    background-color: #ffffff;
+    margin: 1rem;
+    /* flex: 1 0 25rem; */
+    max-width: 10rem;
+    max-height: 25rem;
+    transition: 0.2s;
+    box-shadow: 5px 5px 2px rgb(64, 64, 64);
+    padding-left: 0.5rem;
+}
+
+.productCard:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.productImage {
+    margin-top: 0.5rem;
+    max-width: 95%;
+    height: 50%;
+    border-radius: 5%;
+}
+
+.productCard_details {
+    border-top: 1px solid black;
+}
+
+.productName {
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.productPrice,
+.productDetails {
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.productDetails {
+    margin-bottom: 15px;
+}
+
+.menuDashboard {
+    display: grid;
+    /* grid-gap: 2px; */
+    grid-auto-flow: column;
+    grid-auto-columns: 120px;
+    align-items: center;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #e99bbd;
+    width: 57%;
+    height: 20%;
+    border-radius: 2%;
+    box-shadow: 5px 5px 2px rgb(155, 155, 155);
+}
+
+.menuList {
+    display: inline-block;
+    justify-content: space-evenly;
+    /* margin-top: 5px; */
+    /* margin-left: 10px; */
+}
+
+.menuCard {
+    position: relative;
+    background-color: #f1f1f1;
+    margin: 1rem;
+    flex: 1 0 25rem;
+    max-width: 7rem;
+    max-height: 7rem;
+    transition: 0.2s;
+    box-shadow: 5px 5px 2px rgb(70, 70, 70);
+}
+
+.menuCard:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.menuImage {
+    max-width: 100%;
+}
+
+.menuName {
+    padding-bottom: 5px;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.costDashboard {
+    display: flex;
+    float: right;
+    justify-content: center;
+    width: 40%;
+    height: 84vh;
+    background-color: #e99bbd;
+    margin-right: 10px;
+    border-radius: 2%;
+    box-shadow: 5px 5px 2px rgb(155, 155, 155);
+    text-align: center;
+}
+
+.costContainer {
+    background-color: #f1eeee;
+    width: 100%;
+    margin: 10px;
+    position: relative
+}
+
+.costContainer th {
+    background-color: #000000;
+    color: #f2f2f2;
+}
+
+.costContainer tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.costContainer tr:hover {
+    background-color: #ddd;
+}
+
+.costTable {
+    width: 95%;
+    margin-left: 10px;
+}
+
+.totalCost {
+    position: absolute;
+    width: 100%;
+    border-top: 1px solid black;
+    text-align: left;
+    bottom: 0;
+    padding-bottom: 50px;
+}
+
+.totalCostWord {
+    margin-left: 10px;
+}
+
+.costButton {
+    display: flex;
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.costButton button {
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.stocksDashboard {
+    display: flex;
+    justify-content: center;
+    width: 98%;
+    height: 84vh;
+    background-color: #e99bbd;
+    margin: 10px;
+    border-radius: 1%;
+    box-shadow: 5px 5px 2px rgb(155, 155, 155);
+    text-align: center;
+}
+
+.stocksContainer {
+    background-color: #f1eeee;
+    width: 100%;
+    margin: 10px;
+    position: relative
+}
+
+.stocksContainer p {
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.stocksContainer th {
+    background-color: #000000;
+    color: #f2f2f2;
+}
+
+.stocksContainer tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.stocksContainer tr:hover {
+    background-color: #ddd;
+}
+
+.stocksTable {
+    width: 98%;
+    margin: 10px;
+}
+
+.nameStocksTable {
+    width: 60%
+}
+
+.quantityStocksTable {
+    width: 20%
+}
+
+.unitPriceStocksTable {
+    width: 20%
+}
+
+.stocksButton {
+    display: flex;
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.stocksButton button {
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.productAvailableDashboard {
+    display: flex;
+    justify-content: center;
+    width: 98%;
+    height: 84vh;
+    background-color: #e99bbd;
+    margin: 10px;
+    border-radius: 1%;
+    box-shadow: 5px 5px 2px rgb(155, 155, 155);
+    text-align: center;
+}
+
+.productAvailableContainer {
+    background-color: #f1eeee;
+    width: 100%;
+    margin: 10px;
+    position: relative
+}
+
+.productAvailableContainer p {
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.productAvailableContainer th {
+    background-color: #000000;
+    color: #f2f2f2;
+}
+
+.productAvailableContainer tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.productAvailableContainer tr:hover {
+    background-color: #ddd;
+}
+
+.productAvailableTable {
+    width: 98%;
+    margin: 10px;
+}
+
+.productAvailableButton {
+    display: flex;
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.productAvailableButton img,
+.stocksButton img {
+    width: 10px;
+    height: 10px;
+}
+
+.productAvailableButton button {
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.addImageLogo {
+    display: none;
+}
+
+.imgReg {
+    width: 30px;
+    height: 25px;
+}
+
+.addImageLogoText {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-bottom: solid 1.5px black;
+}
+
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.modal,
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49, 49, 49, 0.8);
+}
+
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 3px;
+    max-width: 600px;
+    min-width: 300px;
+    text-align: center;
+}
+
+.orderHistoryDashboard {
+    display: flex;
+    justify-content: center;
+    width: 98%;
+    height: 84vh;
+    background-color: #e99bbd;
+    margin: 10px;
+    border-radius: 1%;
+    box-shadow: 5px 5px 2px rgb(155, 155, 155);
+    text-align: center;
+}
+
+.orderHistoryContainer {
+    background-color: #f1eeee;
+    width: 100%;
+    margin: 10px;
+    position: relative
+}
+
+.orderHistoryContainer th {
+    background-color: #000000;
+    color: #f2f2f2;
+}
+
+.orderHistoryContainer tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.orderHistoryContainer tr:hover {
+    background-color: #ddd;
+}
+
+.orderHistoryTable {
+    width: 98%;
+    margin: 10px;
+}
+
+.nameHistoryTable {
+    width: 30%
+}
+
+.quantityHistoryTable {
+    width: 20%
+}
+
+.totalPriceHistoryTable {
+    width: 20%
+}
+
+.unitPriceHistoryTable {
+    width: 20%
+}
+
+.orderHistoryButton {
+    display: flex;
+    margin: 10px;
+}
+
+.orderHistoryButton button {
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.totalSales {
+    position: absolute;
+    width: 100%;
+    border-top: 1px solid black;
+    text-align: right;
+    bottom: 0;
+}
+
+.totalSalesWord {
+    margin-right: 100px;
+}
