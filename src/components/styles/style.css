@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+* {
+    box-sizing: border-box;
+}
+
 .logIn {
     display: flex;
     align-items: center;
@@ -6,6 +10,7 @@
     height: 100vh;
     /* background-color: #FDF5DF; */
     background-image: url('../images/Background.svg');
+    width: 100%;
 }
 
 .logInContainer {
@@ -16,14 +21,32 @@
     padding: 15px;
     border-radius: 2%;
     width: 250px;
-    height: 325px;
+    height: auto;
     box-shadow: 5px 5px 2px rgb(96, 95, 95);
+    margin: auto;
 }
 
-form {
+.err,
+.error {
+    font-size: 12px;
+    padding: 2px;
+    padding-bottom: none;
+    color: #cb0202;
+    text-align: center;
+}
+
+.logInContainer form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    gap: 2px;
+    /* Ensure the form takes the full width of the container */
+}
+
+.logInContainer span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logInHeader {
@@ -32,9 +55,11 @@ form {
     font-weight: bold;
 }
 
-.signInButton {
+.signButton {
+    display: block;
     color: black;
     text-decoration-line: none;
+    text-align: center;
 }
 
 .signButton:hover {
@@ -57,7 +82,8 @@ form {
     color: rgb(20, 0, 241);
 }
 
-input {
+input,
+.inputCategory {
     padding: 5px;
     border: none;
     border-bottom: solid 1.5px black;
@@ -72,6 +98,52 @@ input[type=submit]:hover {
     background-color: #fba2ba;
 }
 
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.modal,
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49, 49, 49, 0.8);
+}
+
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    min-width: 300px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.modal-content form input {
+    margin-bottom: 5px;
+}
+
+.modal-content form input,
+.modal-content form button {
+    width: 100%;
+}
+
 .home {
     background-image: url('../images/Background.svg');
     width: 100%;
@@ -79,7 +151,7 @@ input[type=submit]:hover {
 }
 
 .navBar {
-    height: 5vh;
+    height: 10vh;
     background-color: #fc4c55;
     display: flex;
     align-items: center;
@@ -137,7 +209,7 @@ input[type=submit]:hover {
 
 .dropdown-menu.inactive {
     opacity: 0;
-    visibility: hidden;
+    visibility: collapse;
     transform: translateY(-20px);
     transition: 500ms ease;
 }
@@ -207,6 +279,7 @@ input[type=submit]:hover {
     transition: 0.2s;
     box-shadow: 5px 5px 2px rgb(64, 64, 64);
     padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 .productCard:hover {
@@ -215,7 +288,7 @@ input[type=submit]:hover {
 
 .productImage {
     margin-top: 0.5rem;
-    max-width: 95%;
+    width: 100%;
     height: 50%;
     border-radius: 5%;
 }
@@ -242,10 +315,8 @@ input[type=submit]:hover {
 
 .menuDashboard {
     display: grid;
-    /* grid-gap: 2px; */
-    grid-auto-flow: column;
-    grid-auto-columns: 120px;
-    align-items: center;
+    grid-gap: 1rem;
+    /* Adjust the gap between cards */
     overflow-y: hidden;
     overflow-x: scroll;
     margin-top: 10px;
@@ -257,18 +328,17 @@ input[type=submit]:hover {
     box-shadow: 5px 5px 2px rgb(155, 155, 155);
 }
 
-.menuList {
-    display: inline-block;
-    justify-content: space-evenly;
-    /* margin-top: 5px; */
-    /* margin-left: 10px; */
+.menuCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(6.5rem, 1fr));
+    justify-content: center;
+    /* Center items horizontally */
 }
 
 .menuCard {
     position: relative;
     background-color: #f1f1f1;
     margin: 1rem;
-    flex: 1 0 25rem;
     max-width: 7rem;
     max-height: 7rem;
     transition: 0.2s;
@@ -284,6 +354,7 @@ input[type=submit]:hover {
 }
 
 .menuName {
+    margin: 0;
     padding-bottom: 5px;
     font-weight: bold;
     font-size: 12px;
@@ -441,7 +512,7 @@ input[type=submit]:hover {
     background-color: #f1eeee;
     width: 100%;
     margin: 10px;
-    position: relative
+    position: relative;
 }
 
 .productAvailableContainer p {
@@ -468,7 +539,7 @@ input[type=submit]:hover {
     margin: 10px;
 }
 
-.productAvailableButton {
+.productAvailableAddButton {
     display: flex;
     float: right;
     position: absolute;
@@ -478,12 +549,14 @@ input[type=submit]:hover {
 }
 
 .productAvailableButton img,
+.productAvailableAddButton img,
 .stocksButton img {
     width: 10px;
     height: 10px;
 }
 
-.productAvailableButton button {
+.productAvailableButton,
+.productAvailableAddButton {
     margin-left: 10px;
     border-radius: 5px;
 }
@@ -504,39 +577,6 @@ input[type=submit]:hover {
     font-size: 12px;
     cursor: pointer;
     border-bottom: solid 1.5px black;
-}
-
-body.active-modal {
-    overflow-y: hidden;
-}
-
-.modal,
-.overlay {
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: fixed;
-}
-
-.overlay {
-    background: rgba(49, 49, 49, 0.8);
-}
-
-.modal-content {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    line-height: 1.4;
-    background: #f1f1f1;
-    padding: 14px 28px;
-    border-radius: 3px;
-    max-width: 600px;
-    min-width: 300px;
-    text-align: center;
 }
 
 .orderHistoryDashboard {

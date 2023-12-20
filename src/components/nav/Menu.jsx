@@ -1,49 +1,73 @@
-import React from 'react';
-import Logo from '../images/Logo.svg'
-import coffee from '../images/Macchiato.jpg'
+import React, { useState, useEffect } from 'react';
+import comboMeal from '../images/comboMeal.jpg';
+import milkteaSeries from '../images/milkteaSeries.jpg';
+import pastaSnacks from '../images/pastaSnacks.jpg';
+import riceBowls from '../images/riceBowls.jpg';
 
+const Menu = ({ onMenuItemChange }) => {
+    const [selectedProduct, setSelectedProduct] = useState(null);
+  const menu = [
+    {
+      id: 1,
+      name: "Rice Bowl",
+      caregory: "riceBowl",
+      image: riceBowls
+    },
+    {
+      id: 2,
+      name: "Bird's Combos",
+      category: "birdsCombos",
+      image: comboMeal
+    },
+    {
+      id: 3,
+      name: "Pizza Treats",
+      category: "pizzaTreats",
+      image: pastaSnacks
+    },
+    {
+      id: 4,
+      name: "Pasta and Snacks",
+      category: "pastaSnacks",
+      image: pastaSnacks
+    },
+    {
+      id: 5,
+      name: "Milktea Series",
+      category: "milkteaSeries",
+      image: milkteaSeries
+    },
+  ];
 
-const Menu = (props) => {
-    const menu = [
-        {
-            id: 1,
-            name: "Drinks",            
-            image: {Logo},        
-        },
-        {
-            id: 2,
-            name: "Dessert",          
-            image:  {Logo}, 
-        },
-        {
-            id: 3,
-            name: "Meal",    
-            image:  {Logo},    
-        }
+  const handleMenuItemClick = (product) => {
+    setSelectedProduct(product.category);
     
-    ];
-    return (
+  console.log('Selected Product:', product.name);
+    onMenuItemChange(product.category);
+  };
+
+  return (
+    <div className='menuDashboard'>
+     
+         <div className='menuCards'>
+      {menu.map((item) => (
         
-        <div className='menuDashboard'>
-            {menu.map((props)=>{
-        return (
-            <div >
-                <div className='menuList'>
-                    <div key={props.id} className='menuCard'>
-                        <img src={coffee} className='menuImage' alt="menu-image" />
-                        {/* <div className='menuCard_details'> */}
-                            <p className='menuName'>{props.name}</p>
-                        {/* </div>  */}
-                    </div>
-                </div>
-               
-            </div>
-       
-       
-    );
-    })}
-        </div>
-    );
+          <div
+            key={item.id}
+            className={`menuCard ${selectedProduct === item.name ? 'selected' : ''}`}
+            onClick={() => handleMenuItemClick(item)}
+          >
+              <img className='menuImage' src={item.image} alt="" />
+            <p className="menuName">{item.name}</p>
+          </div> 
+         
+        ))}
+      </div>
+    
+     
+      
+    </div>
+  );
 };
 
 export default Menu;

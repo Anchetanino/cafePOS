@@ -9,21 +9,17 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const Home = () => {
     return (
-        <div className='home'>
-            <BrowserRouter>
-       <NavBar/>
+      <div className="home">
+        <NavBar />
         <Routes>
-        {/* <Route path='/' element={<Login/>}/> */}
-        <Route path="/" element={<Dashboard /> }/>
-        <Route path="productsList" element={<ProductAvailable/> }/>
-        <Route path="stocks" element={<Stocks/> }/>
-        <Route path="history" element={<OrderHistory/> }/>
-      </Routes>
-
-
-      </BrowserRouter>
-        </div>
+        <Route path="/" element={<Login />} />
+        <Route path="login" element={<Login />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="productsList" element={<ProductAvailable />} />
+          <Route path="stocks" element={<Stocks />} />
+          <Route path="history" element={<OrderHistory />} />
+        </Routes>
+      </div>
     );
-};
-
+  };
 export default Home;
